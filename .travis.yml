@@ -7,4 +7,4 @@ python:
 
 # command to run tests
 script:
- - python test_hw4.py
+ - python -m unittest test_hw4.py
