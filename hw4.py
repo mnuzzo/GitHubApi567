@@ -3,20 +3,18 @@ import json
 
 def retrieve_github_info(userID):
     base_repo_url = 'https://api.github.com/users/' + str(userID) + '/repos' 
-    repo_req = requests.get(base_repo_url, auth=('mnuzzo567','Nanoo96@SnoozeO14'))
+    repo_req = requests.get(base_repo_url)
     
     if repo_req.status_code != 200:
-        print 'Error: Could Not Reach Endpoint'
         return 'Error'
     else:
         return repo_req.json()
 
 def retrieve_github_commit_info(project, userID):
     base_commit_url = 'https://api.github.com/repos/' + str(userID) + '/' + str(project) + '/commits'
-    commit_req = requests.get(base_commit_url, auth=('mnuzzo567','Nanoo96@SnoozeO14'))
+    commit_req = requests.get(base_commit_url)
 
     if commit_req.status_code != 200:
-        print 'Error: Could Not Reach Endpoint'
         return 'Error'
     else:
         return len(commit_req.json())
