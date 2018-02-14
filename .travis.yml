@@ -1,13 +1,11 @@
 
 language: python
 python:
-  - "2.6"
   - "2.7"
-  - "3.3"
-  - "3.4"
  install:
   - pip install requests
 
 # command to run tests
 script:
+ - python --version
  - python -m unittest test_hw4
