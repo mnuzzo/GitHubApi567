@@ -37,7 +37,7 @@ def parse_dat_json(rawRepoJSON, userID):
 
     print 'User: ' + str(userID)
     for repo in projects:
-        print 'Repo: ' + str(repo) + '  Number of commits: ' + str(commits[projects.index(repo)])
+        print 'Repo: ' + str(repo) + '|  Number of commits: ' + str(commits[projects.index(repo)])
 
 
 if __name__ == '__main__':
